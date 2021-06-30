@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/TopBar.css">
+  <link rel="stylesheet" href="../css/register.css">
+  
+
+  <script>
+    function showPassword() {
+      var buttonIcon = document.getElementById("ojito")
+      var password = document.getElementById("passwordInput")
+      var buttonIconDos = document.getElementById("ojitoDos")
+      var passwordConfirm = document.getElementById("passwordConfirm")
+      
+      if (password.getAttribute("type") == "password") {
+        password.setAttribute("type", "text")
+        buttonIcon.className = "fa fa-eye-slash"
+      } else {
+        password.setAttribute("type", "password")
+        buttonIcon.className = "fa fa-eye"
+      }
+      if (passwordConfirm.getAttribute("type") == "password") {
+        passwordConfirm.setAttribute("type", "text")
+        buttonIconDos.className = "fa fa-eye-slash"
+      } else {
+        passwordConfirm.setAttribute("type", "password")
+        buttonIconDos.className = "fa fa-eye"
+      }
+    }
+  </script>
+  <title>Periodismo de Resistencia</title>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img id="logo" src="/public/img/logo_sin_fondo.png" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navBar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          id="navBar"
+          class="collapse navbar-collapse justify-content-end text-end"
+        >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./Login.html">
+                <button type="button" class="navButton btn btn-primary">
+                  Iniciar sesión
+                </button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Register.html">
+                <button type="button" class="navButton btn btn-primary">
+                  Registrarse
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <div class="pt-5 m-0 vh-100 row justify-content-center">
+      <div class="col-sm-10 col-lg-6 col-md-8">
+        <div class="card mb-5">
+          <div class="card-body p-5">
+            <form onsubmit="toProbe(event);">
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label" for="bname">Nombre de Usuario</label>
+                    <input class="form-control" placeholder="Escriba aquí su nombre de usuario" id="fname" type="text"
+                      name="bname">
+                    <div id="bnameError" class="form-text"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label class="form-label" for="password">Contraseña</label>
+                  <div class="input-group">
+                    <input id="passwordInput" type="password" placeholder="Contraseña" class="form-control">
+                    <span class="input-group-btn">
+                      <button onclick="showPassword()" class="btn btn-default reveal" type="button"><i id="ojito"
+                          class="fa fa-eye" aria-hidden="true"></i></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <label class="form-label" for="Password">Confirmar:</label>
+                  <div class="input-group">
+                    <input id="passwordConfirm" type="password" placeholder="Contraseña" class="form-control">
+                    <span class="input-group-btn">
+                      <button onclick="showPassword()" class="btn btn-default reveal" type="button"><i id="ojitoDos"
+                          class="fa fa-eye" aria-hidden="true"></i></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label" for="fname">Nombres:</label>
+                    <input class="form-control" placeholder="Escriba aquí sus nombres" id="fname" type="text"
+                      name="fname">
+                    <div id="vnameError" class="form-text"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label" for="lname">Apellidos: </label>
+                    <input class="form-control" placeholder="Escriba aquí sus apellidos" id="lname" type="text">
+                    <div id="lnameError" class="form-text"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="form-label" for="lemail">Correo electrónico:</label>
+                    <input class="form-control" placeholder="Ingrese su correo electrónico" id="lemail" type="email">
+                    <div id="emailError" class="form-text"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="strasse" class="form-label"> Dirección </label>
+                    <input name="strasse" id="strasse" type="text" class="form-control"
+                      placeholder="Digite su dirección">
+                    <div id="strasseError" class="form-text"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="ort" class="form-label"> Ciudad </label>
+                    <input name="ort" id="ort" type="text" class="form-control" placeholder="Escriba aquí su ciudad">
+                    <div id="ortError" class="form-text"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="geburtsdatum" class="form-label"> Fecha de nacimiento </label>
+                    <input name="geburtsdatum" id="geburtsdatum" type="date" class="form-control" value="2021-06-04"
+                      placeholder="Bitte schreiben Sie hier ihre Geburtsdatum">
+                    <div id="cumpleError" class="form-text"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="text-center">
+                    <button class="btn btn-secondary mt-3 buttonSend" type="submit"> Enviar </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>

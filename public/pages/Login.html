@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/TopBar.css">
+  <link rel="stylesheet" href="../css/Login.css">
+  
+  <script>
+
+    function showPassword() {
+      var buttonIcon = document.getElementById("ojito")
+      var password = document.getElementById("passwordInput")
+      if (password.getAttribute("type") == "password") {
+        password.setAttribute("type", "text")
+        buttonIcon.className="fa fa-eye-slash"
+      } else {
+        password.setAttribute("type", "password")
+        buttonIcon.className="fa fa-eye"
+      }
+    }
+  </script>
+  <title>Login page</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img id="logo" src="/public/img/logo_sin_fondo.png" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navBar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          id="navBar"
+          class="collapse navbar-collapse justify-content-end text-end"
+        >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./Login.html">
+                <button type="button" class="navButton btn btn-primary">
+                  Iniciar sesión
+                </button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Register.html">
+                <button type="button" class="navButton btn btn-primary">
+                  Registrarse
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="row justify-content-center p-5">
+    <div class="col-md-5 col-xs-4">
+      <div class="card shadow p-3 mb-5 bg-body rounded">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-12">
+                <input class="form-control mt-3" placeholder="E-Mail" name="emailField" type="email">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <!--<input class="form-control" placeholder="Passwort" name="passwordField" type="password">-->
+                <div class="input-group">
+                  <input id="passwordInput" type="password" placeholder="Contraseña" class="form-control mt-3">
+                  <span class="input-group-btn">
+                    <button onclick="showPassword()" class="btn btn-default reveal mt-3" type="button"><i id="ojito" class="fa fa-eye"
+                        aria-hidden="true"></i></button>
+                  </span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-center p-0">
+                  <button id="btnSenden"type="button" class="btn btn-primary  mt-3 mb-3"> Enviar</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-center">
+                  <a href="#" class="color-primary">¿Olvidó su contraseña?</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-center">
+                  <p>¿Todavía no se ha registrado?  </p>
+                  <a href="./Register.html" class="color-primary">Registrese aquí</a>
+                </div>
+              </div>
+
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

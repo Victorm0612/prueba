@@ -1,0 +1,19 @@
+.card{
+  background-color: rgb(44, 44, 44);
+}
+.btn-default{
+  background-color: white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius:0; 
+  border: 1px solid rgba(128, 128, 128, 0.445);
+}
+.buttonSend{
+  width: 200px;
+  background-color: rgb(223, 167, 14);
+  color: black;
+  border-radius: 0;
+  border-color: rgb(223, 167, 14);
+}
+.buttonSend:hover{
+  background-color: tomato;
+}

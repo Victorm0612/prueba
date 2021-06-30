@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/TopBar.css" />
+    <title>Periodismo de Resistencia</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" src="/public/img/logo_sin_fondo.png" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navBar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            id="navBar"
+            class="collapse navbar-collapse justify-content-end text-end"
+          >
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/Login.html">
+                  <button type="button" class="navButton btn btn-primary">
+                    Iniciar sesión
+                  </button>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/Register.html">
+                  <button type="button" class="navButton btn btn-primary">
+                    Registrarse
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="body container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <h1>Una casa para el periodismo alternativo</h1>
+          <p>
+            En Colombia los grandes medios de comunicación dejaron
+            paulatinamente de ser contrapoder y críticos con el gobierno, en
+            medio del Paro Nacional del 28 de abril de 2021 se evidenció la
+            falta que hace poder acceder a la información crítica y sin
+            eufemismos.
+          </p>
+          <p>
+            Este portal es como una ventana que aloja que visibiliza a todos los
+            medios independientes que desde su labor nos mantienen al tanto de
+            lo que está pasando en el país.
+          </p>
+
+          <a href="./pages/Noticias.html">
+            <button type="button" class="btn btn-primary bInicio mt-5 mb-5">
+              Empezar
+            </button>
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div
+            id="carouselIndex"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselIndex"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselIndex"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselIndex"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/Index1.png" />
+                <div class="carousel-caption ">
+                  <h5>First slide label</h5>
+                  <p>
+                    Some representative placeholder content for the first slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/Index1.png" />
+                <div class="carousel-caption">
+                  <h5>Second slide label</h5>
+                  <p>
+                    Some representative placeholder content for the second
+                    slide.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/Index1.png" />
+                <div class="carousel-caption">
+                  <h5>Third slide label</h5>
+                  <p>
+                    Some representative placeholder content for the third slide.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselIndex"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselIndex"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
